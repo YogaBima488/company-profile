@@ -49,6 +49,27 @@ header ul li a:hover {
 	background-color: #BE0000;
 	color: #fff;
 }
+
+header ul li a {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+header ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary);
+    transition: width 0.3s ease;
+}
+
+header ul li a:hover::after {
+    width: 100%;
+}
+
 .active {
 	background-color: #BE0000;
 	color: #fff;
@@ -736,5 +757,6 @@ iframe {
         flex: 1 1 100%;
     }
 }
+
 
 
